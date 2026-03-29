@@ -58,3 +58,43 @@
   text-decoration: line-through;
   color: #8d99ae;
 }
+/* كود الموبايل الشامل */
+@media (max-width: 768px) {
+  /* الحاوية الرئيسية */
+  .container {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* إذا كان عندك Grid للكروت (تحدي الثلاثين، المزاد، إلخ) */
+  .grid, .menuGrid, .dashboard {
+    grid-template-columns: 1fr !important; /* عمود واحد فقط */
+    gap: 15px;
+  }
+
+  /* الكروت نفسها */
+  .card, .navCard {
+    width: 100% !important;
+    min-height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* العناوين الكبيرة */
+  h1 {
+    font-size: 24px !important;
+    text-align: center;
+  }
+
+  /* الأزرار والقوائم */
+  .buttonGroup, .tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .addBtn, .actionBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

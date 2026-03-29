@@ -1,49 +1,79 @@
 .nav {
   background-color: #16161a;
   border-bottom: 2px solid #e63946;
-  padding: 15px 30px;
+  padding: 15px 20px;
   display: flex;
+  flex-direction: column; /* جعل اللوجو فوق والأزرار تحت */
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 15px rgba(230, 57, 70, 0.2);
+  width: 100%;
 }
 
 .logo {
   color: #e63946;
   font-weight: 800;
-  font-size: 28px;
-  margin-left: auto;
+  font-size: 24px;
+  margin-bottom: 15px; /* مسافة تحت اللوجو */
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .links {
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  width: 100%;
+  justify-content: flex-start; /* الأزرار تبدأ من اليمين */
+  overflow-x: auto; /* أهم سطر: يسمح بسحب الأزرار يمين ويسار */
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch; /* سكرول ناعم للايفون */
+  scrollbar-width: none; /* إخفاء السكرول في فايرفوكس */
+}
+
+/* إخفاء السكرول بار في كروم وسفاري */
+.links::-webkit-scrollbar {
+  display: none;
 }
 
 .tabBtn {
   background: transparent;
   color: #8d99ae;
   border: none;
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 8px 15px;
+  font-size: 14px;
   font-weight: 700;
   border-radius: 6px;
   transition: all 0.3s ease;
-}
-
-.tabBtn:hover {
-  color: #eaeaea;
-  background-color: rgba(255, 255, 255, 0.05);
+  white-space: nowrap; /* يمنع النص ينزل سطر جديد */
 }
 
 .activeTab {
   background-color: #e63946;
   color: #fff;
 }
-.activeTab:hover {
-  background-color: #d62828;
+
+/* --- تعديلات للشاشات الكبيرة (يرجع للشكل الأصلي) --- */
+@media (min-width: 769px) {
+  .nav {
+    flex-direction: row; /* يرجع الأزرار واللوجو جنب بعض */
+    padding: 15px 30px;
+  }
+  
+  .logo {
+    margin-bottom: 0;
+    margin-left: auto;
+    font-size: 28px;
+  }
+  
+  .links {
+    width: auto;
+    overflow-x: visible;
+  }
+  
+  .tabBtn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
 }
