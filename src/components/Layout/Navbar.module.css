@@ -1,0 +1,49 @@
+.nav {
+  background-color: #16161a;
+  border-bottom: 2px solid #e63946;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.2);
+}
+
+.logo {
+  color: #e63946;
+  font-weight: 800;
+  font-size: 28px;
+  margin-left: auto;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+}
+
+.tabBtn {
+  background: transparent;
+  color: #8d99ae;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.tabBtn:hover {
+  color: #eaeaea;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.activeTab {
+  background-color: #e63946;
+  color: #fff;
+}
+.activeTab:hover {
+  background-color: #d62828;
+}

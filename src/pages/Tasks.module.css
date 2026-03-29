@@ -1,0 +1,32 @@
+.container { padding: 40px 20px; max-width: 700px; margin: 0 auto; }
+.title { font-size: 32px; font-weight: 900; color: #fff; margin-bottom: 30px; text-align: center; }
+
+.inputArea { display: flex; gap: 10px; margin-bottom: 40px; }
+.taskInput {
+  flex: 1; background: #16161a; border: 2px solid #333;
+  padding: 15px; border-radius: 10px; color: #fff; font-size: 18px; outline: none;
+}
+.taskInput:focus { border-color: #e63946; }
+.addBtn { background: #e63946; color: #fff; border: none; padding: 0 25px; border-radius: 10px; font-weight: 800; cursor: pointer; }
+
+.taskList { display: flex; flex-direction: column; gap: 12px; }
+.taskItem {
+  background: #16161a; padding: 18px; border-radius: 12px;
+  display: flex; justify-content: space-between; align-items: center;
+  border: 1px solid #333; transition: 0.3s;
+}
+.checkWrapper { display: flex; align-items: center; gap: 15px; cursor: pointer; flex: 1; }
+.checkbox {
+  width: 24px; height: 24px; border: 2px solid #e63946; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; color: #e63946; font-weight: bold;
+}
+.taskText { color: #eaeaea; font-size: 18px; font-weight: 600; }
+
+.done { opacity: 0.5; border-color: #2a9d8f; }
+.done .taskText { text-decoration: line-through; color: #8d99ae; }
+.done .checkbox { border-color: #2a9d8f; color: #2a9d8f; }
+
+.deleteBtn {
+  background: transparent; color: #555; border: none; cursor: pointer; font-size: 14px;
+}
+.deleteBtn:hover { color: #ff4d4d; }

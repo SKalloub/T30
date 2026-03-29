@@ -1,0 +1,42 @@
+.container { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.title { font-size: 34px; font-weight: 900; color: #fff; border-right: 6px solid #e63946; padding-right: 15px; }
+
+.addBtn { background: #e63946; color: #fff; border: none; padding: 12px 20px; border-radius: 8px; font-weight: 800; cursor: pointer; }
+.filterBar { display: flex; gap: 10px; margin-bottom: 30px; }
+.filterBtn { background: #16161a; border: 1px solid #333; color: #8d99ae; padding: 8px 18px; border-radius: 20px; font-weight: 700; cursor: pointer; }
+.activeFilter { background: #e63946; color: #fff; border-color: #e63946; }
+
+/* Form */
+.formCard { background: #16161a; padding: 25px; border-radius: 12px; border: 1px solid #333; margin-bottom: 40px; display: flex; flex-direction: column; gap: 15px; }
+.input, .textarea, .optionsGrid select { background: #0a0a0c; border: 1px solid #333; padding: 12px; border-radius: 8px; color: #fff; outline: none; }
+.input:focus, .textarea:focus { border-color: #e63946; }
+.optionsGrid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; align-items: center; }
+.checkboxGroup { display: flex; align-items: center; gap: 8px; color: #8d99ae; font-size: 14px; }
+.saveBtn { background: #2a9d8f; color: #fff; border: none; padding: 15px; border-radius: 8px; font-weight: 800; cursor: pointer; margin-top: 10px; }
+
+/* Career Cards */
+.list { display: flex; flex-direction: column; gap: 20px; }
+.careerCard { background: #16161a; border-radius: 15px; border: 1px solid #333; padding: 25px; position: relative; transition: 0.3s; }
+.careerCard[data-importance="متوقع"] { border-right: 8px solid #ff4d4d; }
+.careerCard[data-importance="مهم"] { border-right: 8px solid #ffa500; }
+.careerCard[data-importance="عادي"] { border-right: 8px solid #4dff4d; }
+
+.cardHeader { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.mainInfo h3 { color: #fff; font-size: 24px; margin-bottom: 5px; }
+.mainInfo small { color: #8d99ae; font-size: 14px; }
+.tags { display: flex; gap: 8px; }
+.tag { background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px; font-size: 12px; color: #e63946; font-weight: bold; }
+.partialTag { background: #e63946; color: #fff; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+
+.statusBox { padding: 10px 15px; border-radius: 8px; font-weight: 800; cursor: pointer; font-size: 13px; min-width: 100px; text-align: center; }
+.statusBox[data-status="لسا"] { background: #333; color: #aaa; }
+.statusBox[data-status="مدروسة"] { background: #2a9d8f; color: #fff; box-shadow: 0 0 10px rgba(42, 157, 143, 0.4); }
+.statusBox[data-status="مش بحاجة"] { background: #444; color: #888; text-decoration: line-through; }
+
+/* Timeline Clubs */
+.timeline { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 10px; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 10px; }
+.timelineItem { display: flex; align-items: center; gap: 8px; }
+.dot { width: 10px; height: 10px; background: #e63946; border-radius: 50%; box-shadow: 0 0 5px #e63946; }
+.clubName { color: #eaeaea; font-weight: 700; font-size: 15px; }
+.timelineItem:not(:last-child):after { content: "←"; color: #333; margin-right: 8px; font-weight: bold; }

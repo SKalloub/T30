@@ -1,0 +1,45 @@
+.container {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #16161a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #e63946;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.comingSoon {
+  color: #e63946;
+  font-size: 14px;
+  font-weight: bold;
+  background: rgba(230, 57, 70, 0.1);
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
