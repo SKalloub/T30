@@ -109,7 +109,7 @@ const Auction: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.topBar}>
-        <h1 className={styles.mainTitle}>نظام المزاد القتالي</h1>
+        <h1 className={styles.mainTitle}>قوائم المزاد</h1>
         <button className={styles.addBtn} onClick={() => setShowForm(!showForm)}>
           {showForm ? 'إلغاء' : '+ قائمة جديدة'}
         </button>
